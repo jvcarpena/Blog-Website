@@ -1,7 +1,19 @@
-# Project wide
-.DS_STORE
-.env
+# This is a gitignore file. Folders and file types in here will not
+# be added to version control and will not be uploaded to Github.
+# For example we ignore the hidden files from Pycharm and VS Code.
+.idea/
+.vscode
 
+### Also any macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+# and thumbnails
+._*
+
+# People have already very handy .gitignore templates for Python projects.
+# Below is this one here: https://github.com/github/gitignore/blob/main/Python.gitignore
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -110,10 +122,8 @@ ipython_config.py
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+#   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
-.pdm-python
-.pdm-build/
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
@@ -158,9 +168,3 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
