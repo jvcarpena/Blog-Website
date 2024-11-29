@@ -15,6 +15,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 import smtplib
 
+# Load .env file
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv("FLASK_KEY")
@@ -282,9 +284,6 @@ def about():
     return render_template("about.html", current_user=current_user)
 
 
-# Load .env file
-load_dotenv()
-
 MAIL_ADDRESS = os.getenv("EMAIL_KEY")
 MAIL_APP_PW = os.getenv("PASSWORD_KEY")
 
@@ -307,4 +306,4 @@ def send_email(name, email, phone, message):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=False, port=5002)
